@@ -60,7 +60,7 @@ not start from where it left off
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         lenght = len(nums1) + len(nums2)
-        nums1.append(float('inf'))
+        nums1.append(float('inf')) #acts as an unbounded upper value for comparison
         nums2.append(float('inf'))
         mid = lenght // 2 + 1
         last = prev = 0
@@ -75,3 +75,35 @@ class Solution:
                 right += 1
             mid -= 1
         return last if lenght % 2 else (prev + last) / 2
+
+#------------------------#
+#done own implementation
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        m = len(nums1)
+        n = len(nums2)
+        
+        i = 0
+        j = 0
+        
+        nums1.append(float('inf')) #acts as an unbounded upper value for comparison
+        nums2.append(float('inf'))
+        
+        merged = []
+        while len(merged) <= ((m+n)//2):
+            # print("len(merged): ", len(merged))
+            if nums1[i] <= nums2[j]:
+                merged.append(nums1[i])
+                print(nums1[i])
+                i += 1
+            else:
+                merged.append(nums2[j])
+                print(nums2[j])
+                j += 1
+            
+        if (m+n)%2: #when odd number 
+            ans = merged[-1]
+        else:
+            ans = (merged[-1] +merged[-2])/2
+            
+        return ans
