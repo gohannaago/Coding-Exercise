@@ -5,28 +5,28 @@ https://leetcode.com/problems/longest-substring-without-repeating-characters/
 """
 
 ## My Attempt ##
-def lengthOfLongestSubstring(s):
-    """
-    :type s: str
-    :rtype: int
-    """
+# def lengthOfLongestSubstring(s):
+#     """
+#     :type s: str
+#     :rtype: int
+#     """
     
-    slist = list(s)
-    maxnum = 1
-    for i in range(len(slist)):
-        for j in range(i+1,len(slist)):
-            print("[", i , ":", j, "]")
-            if (slist[j] not in slist[i:j]):
-                if j-i+1 > maxnum:
-                    maxnum = j-i+1
-                    print("current maxnum = ", maxnum)
-                    print("current substring = ", slist[i:j+1])
-            else:
-                break
+#     slist = list(s)
+#     maxnum = 1
+#     for i in range(len(slist)):
+#         for j in range(i+1,len(slist)):
+#             print("[", i , ":", j, "]")
+#             if (slist[j] not in slist[i:j]):
+#                 if j-i+1 > maxnum:
+#                     maxnum = j-i+1
+#                     print("current maxnum = ", maxnum)
+#                     print("current substring = ", slist[i:j+1])
+#             else:
+#                 break
     
-    return maxnum
+#     return maxnum
 
-print("result is ", lengthOfLongestSubstring("pwwkew"))
+# print("result is ", lengthOfLongestSubstring("pwwkew"))
 
 # ----------------------------------------------------- #
 # solution without explicitly converting string into list
