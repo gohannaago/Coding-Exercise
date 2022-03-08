@@ -32,6 +32,15 @@ since 12.01.2021
     - I used it with type conversions as functions to convert datatype
     
     implemented in [Parse string to tuple](parse_string_tuple.py)
+- Fastest way to count number of digits of an integer --> convert to string and do a len(str)
+- Reversing a string/list : string[::-1], using list slicing
+- Built-in string methods: .isalnum(), .lower() etc
+- Filter function : filter(function, sequence), returns sequence with values that only return True when input to func
+- **collections Datatype** [(Python documentation)](https://docs.python.org/3/library/collections.html)
+    - **Counter** function : takes iterable and returns occurrences of elements as a dict
+    - **Chainmap** : efficient way of combining diff'erent dict object rather than using .update() function
+    - **Deque** : stands for 'double-ended queue', optimized for fast fixed-length operations, optimized memory use for appends and pops on either side
+- Sliding Window method, implemented in [424. Longest Repeating Character Replacement](character_replacement.py)
 
 ## Things to work on (*subjects already looked into are crossed out*)
 - namespace in Python
